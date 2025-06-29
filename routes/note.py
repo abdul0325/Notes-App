@@ -13,6 +13,8 @@ from fastapi import Form
 note = APIRouter()
 templates = Jinja2Templates(directory="templates")
 
+
+
 @note.get("/", response_class=HTMLResponse)
 async def read_item(request: Request):
     docs = conn.notes.notes.find({})

@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from routes.note import note
 from fastapi.staticfiles import StaticFiles
+from routes.vector_db import note
 
 app = FastAPI()
 
