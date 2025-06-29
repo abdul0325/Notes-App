@@ -7,7 +7,7 @@ print("Starting...")
 model = SentenceTransformer("all-MiniLM-L6-v2")  # Load model
 # Create Pinecone client
 
-together.api_key = ""
+together.api_key = "1fa88a19d544a6e982c93f1a586069b8cef724777123c581d5d3dd03d112d9ef"
 pc = Pinecone(api_key="pcsk_ihwQL_E17W62oEwcD99DsUM8GZ5GwCZzm3Yux1iatpfb39NTuhUtXiKGd228GmxYrXhKx",
               environment='aped-4627-b74a')
 # Connect to index
@@ -84,3 +84,4 @@ def query_together_ai(results, user_query):
     except Exception as e:
         print("Error parsing Together AI response:", e)
         return "Error: Could not get a valid response from Together AI."
+print("Pinecone and Together AI initialized successfully.")
